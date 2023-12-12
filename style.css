@@ -49,7 +49,6 @@ body {
   bottom: 5px;
   left: 15%;
   letter-spacing: 1px;
-
 }
 
 .infor-container {
@@ -106,4 +105,52 @@ i {
 .footer {
   height: 40vh;
   background-color: var(--main-color);
+}
+
+/*###### MEDIA QUERIES #####*/
+
+/* SMARTPHONES */
+@media screen and (max-width: 600px) {
+  /* HEADER SECTION */
+  .header {
+    height: 100vh;
+    flex-direction: column;
+  }
+  .img-container {
+    margin: 20px;
+    margin-top: 150px;
+  }
+
+  .img-container img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+
+  .img-container h2 {
+    font-size: 50px;
+    bottom: 0;
+    left: 3%;
+  }
+
+  .infor-container {
+    max-width: 80%;
+    background-color: unset;
+    box-shadow: none;
+    text-align: center;
+  }
+  .infor-container p {
+    text-align: justify;
+  }
+  .icons {
+    text-align: center;
+  }
+}
+
+/* TABLETS */
+
+@media screen and (max-width: 1200px) {
+  /*  */
 }
