@@ -19,6 +19,10 @@ i {
 }
 body {
   background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 /* HEADER STYLES */
 .header {
@@ -79,7 +83,6 @@ i {
 
 .header-background {
   height: 100%;
-  width: 100%;
   position: absolute;
 }
 
@@ -110,7 +113,7 @@ i {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-content: center;
-  gap: 15px;
+  gap: 30px;
   max-width: 1000px;
 }
 
@@ -148,8 +151,45 @@ i {
 
 /* FOOTER SECTION */
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
   height: 40vh;
+  width: 100%;
   background-color: var(--main-color);
+  padding: 8px;
+}
+
+footer .contact {
+  width: 20px;
+}
+
+footer .contacts {
+  display: flex;
+  gap: 8px;
+}
+
+.personal-details {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+}
+
+.personal-details > * {
+  padding: 3px;
+  color: white;
+}
+
+footer div.image img {
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer .icons {
+  text-align: left;
 }
 
 /*###### MEDIA QUERIES #####*/
@@ -195,10 +235,29 @@ i {
 
   .work-done {
     height: 100vh;
+    margin-top: 225px;
+  }
+
+  .work-done h3 {
+    text-align: center;
   }
 
   .cards-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1350px;
+  }
+
+  footer div.image img {
+    width: 100vw;
+    height: 50vh;
+    object-fit: contain;
+    box-shadow: none;
   }
 }
 
@@ -238,4 +297,12 @@ i {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  footer {
+    margin-top: 340px;
+  }
 }
+
+/* * {
+  border: 1px solid red;
+} */
